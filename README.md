@@ -1,4 +1,4 @@
-# imageupload
+# imageupload 文件上传缩略图
 image upload thumbnail for go
 
 ## Process 处理文件上传
