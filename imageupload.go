@@ -44,7 +44,7 @@ func (i *Image) ThumbnailJPEG(width int, height int, quality int) (*Image, error
 }
 
 // ThumbnailPNG create PNG thumbnail from image.
-func (i *Image) ThumbnailPNG(width int, height int) {
+func (i *Image) ThumbnailPNG(width int, height int) (*Image, error) {
 	return ThumbnailPNG(i, width, height)
 }
 
