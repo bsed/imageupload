@@ -39,3 +39,18 @@ t.Write(c.Response().Writer)
 ```
 
 ## ThumbnailPNG PNG缩略图
+
+```go
+img, err := imageupload.Process(c.Request(), "file")
+		if err != nil {
+			panic(err)
+		}
+
+		thumb, err := imageupload.ThumbnailPNG(img, 300, 300)
+		if err != nil {
+			panic(err)
+		}
+
+		thumb.Save(fmt.Sprintf("%d.png", time.Now().Unix()))
+		thumb.Write(c.Response().Writer)
+```
